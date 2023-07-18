@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Final_Part1 </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="finalpt2fr.css">
+
+</head>
+<body>
+	<div id="mainbox">.
+		<div id="headbox"> <h3>The German Trinity</h3> 
+			<div id="pageslots"> 
+				<div id="bmw"> <h4><a href="https://www.albany.edu/~al512714/Finalpt1/1finalA.html"> BMW </a></h4> </div>
+				<div id="merc"> <h4><a href="https://www.albany.edu/~al512714/Finalpt1/final1_b.html">Mercedes Benz</a></h4> </div>
+				<div id="audi"><h4><a href="https://www.albany.edu/~al512714/Finalpt1/1finalc.html"> Audi</a></h4> </div>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<div id="content">
+			<p>Enter your age below to get a car recommendation:</p>
+				<label for="age">Age: </label>
+				<input id="age" type="text">
+				<br>
+				<button onclick="getCar()">Get Car Recommendation</button>
+			<p id="output"></p> 
+		</div>
+		<script>
+		function getCar() {
+			var age = document.getElementById("age").value;
+			var car;
+			if (age < 16) {
+				car = "You are too young to drive!";
+			} else if (age < 25) {
+				car = "We recommend a BMW.";
+			} else if (age < 35) {
+				car = "We recommend an Audi.";
+			} else {
+				car = "We recommend a Mercedes Benz.";
+			}
+			document.getElementById("output").innerHTML = car;
+		}
+	</script>
+</div>
+</body>
+</html>
